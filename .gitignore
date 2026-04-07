@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build Results
+bin/
+obj/
+
+# Log and temp files
+*.log
+*.tmp
+*.pdb
+
+# Compiled binaries
+*.exe
+*.dll
+HeicToJpgShell.dll
+HeicToJpgShell.pdb
+
+# Other
+key.snk
+# (Optional: include key.snk if you want others to build immediately, 
+# but usually it's excluded for security if it's a private key. 
+# For this project, we'll keep it for easy building unless user says otherwise).
+# !key.snk

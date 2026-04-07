@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HeicToJpgShell</RootNamespace>
+    <AssemblyName>HeicToJpgShell</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+
+    <!-- UI 및 Windows 설정 -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    
+    <!-- 강력한 이름 서명 활성화 -->
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    
+    <!-- COM 가시성 -->
+    <ComVisible>true</ComVisible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpShell" Version="2.7.2" />
+    <PackageReference Include="Openize.HEIC" Version="26.1.0" />
+    <!-- 자동으로 종속성을 서명해주는 도구 추가 -->
+    <PackageReference Include="StrongNamer" Version="0.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="register_extension.bat" CopyToOutputDirectory="Always" />
+    <None Include="register_extension.ps1" CopyToOutputDirectory="Always" />
+    <None Include="unregister_extension.bat" CopyToOutputDirectory="Always" />
+    <None Include="unregister_extension.ps1" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>
